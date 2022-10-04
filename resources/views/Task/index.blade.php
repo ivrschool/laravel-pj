@@ -49,7 +49,7 @@
                                 <div class="level-right">
                                     @if($task->is_completed)
                                     <div class="level-item">
-                                        <form>
+                                        <form method="post" action="{{ route('tasks.yet_complete', $task) }}">
                                             @csrf
                                             @method('PATCH')
                                             <span class="icon">
@@ -61,7 +61,7 @@
                                     </div>
                                     @else
                                     <div class="level-item">
-                                        <form>
+                                        <form method="post" action="{{ route('tasks.complete', $task) }}">
                                             @csrf
                                             @method('PATCH')
                                             <span class="icon">
@@ -74,7 +74,8 @@
                                     @endif
 
                                     <div class="level-item">
-                                        <form>
+                                        <!-- <form> -->
+                                        <form method="post" action="{{ route('tasks.destroy', $task) }}">
                                             @csrf
                                             @method('DELETE')
                                             <span class="icon">
