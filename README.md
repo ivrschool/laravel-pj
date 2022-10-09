@@ -1,6 +1,7 @@
 Run APP: "sudo APP_PORT=3001 ./vendor/bin/sail up"
 open: localhost:3001
  
+ ref: https://github.com/carret-kent/lara-tr.git
 
 
 
